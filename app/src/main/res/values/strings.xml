@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">XOProjectLesson</string>
     <string name="circle">O</string>
+    <string name="button_restart">Restart</string>
+    <string name="circle_text">Нолики</string>
+    <string name="cross_text">Крестики</string>
+    <string name="draw_figure_text">Ничья</string>
+    <string name="zero_points">0</string>
 </resources>

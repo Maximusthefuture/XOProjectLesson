@@ -5,67 +5,84 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="horizontal">
+    android:orientation="vertical"
+    android:padding="24dp">
 
-    <GridLayout
-        android:id="@+id/grid_layout"
+    <com.example.xoprojectlesson.XOCustomVIew
+        android:id="@+id/xo_custom_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/restart_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        android:columnCount="3"
-        android:layout_gravity="center">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="invisible">
 
         <Button
-            android:id="@+id/button_01"
+            android:id="@+id/button_restart"
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:text="@string/button_restart"
+            android:layout_gravity="center"
             />
 
-        <Button
-            android:id="@+id/button_02"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"/>
-        <Button
-            android:id="@+id/button_03"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"/>
-        <Button
-            android:id="@+id/button_10"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"/>
-        <Button
-            android:id="@+id/button_11"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"/>
-        <Button
-            android:id="@+id/button_12"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"/>
-        <Button
-            android:id="@+id/button_21"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"/>
-        <Button
-            android:id="@+id/button_22"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"/>
-        <Button
-            android:id="@+id/button_23"
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
 
-    </GridLayout>
+        <TextView
+            android:id="@+id/winner_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size"
+            android:layout_centerHorizontal="true"
+            tools:text="NULL"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            />
 
-    <!--<com.example.xoprojectlesson.XOCustomVIew-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent" />-->
+        <ImageView
+            android:id="@+id/circle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="40dp"
+            android:src="@drawable/circle" />
+
+        <TextView
+            android:id="@+id/circle_scores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-4dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="@dimen/text_size"
+            android:text="@string/zero_points"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cross"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="40dp"
+            android:layout_alignParentBottom="true"/>
+
+        <TextView
+            android:id="@+id/x_scores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/text_size"
+            android:layout_alignParentBottom="true"
+            android:text="@string/zero_points"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
 
 
-
-
-
+    </RelativeLayout>
 
 
 </LinearLayout>
